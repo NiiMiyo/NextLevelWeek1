@@ -1,0 +1,162 @@
+#page-home {
+	/* Pegar a página e botar grande eu acho? */
+	height: 100vh;
+
+	/* Diretório da imagem de fundo */
+	background: url("../assets/home-background.svg") no-repeat;
+
+	/* Ajustar pra ficar em 35 algumacoisa e no final da página */
+	background-position: 35vw bottom;
+}
+
+#page-home .content {
+	/* Pegar a página e botar menos grande? */
+	width: 90%;
+
+	/* Só que agora ela tem um tamanho máximo */
+	max-width: 1100px;
+
+	/* E uma margem lateral automática */
+	margin: 0 auto;
+
+	/* Mas a altura ainda é grande */
+	height: 100%;
+
+	/* Deixa as coisa uma do lado da otra */
+	display: flex;
+
+	/* Volta pra ficar uma em cima da otra (Tem sentido eu prometo) */
+	flex-direction: column;
+}
+
+#page-home header {
+	/* Margem TØP */
+	margin-top: 48px;
+
+	/* Deixa as coisa de ladinho */
+	display: flex;
+
+	/* Alinha as coisa no centro Y e X da box */
+	align-items: center;
+
+	/* Vai jogar cada coisa pro seu lado (Ainda vai ficar no meio, só q longe) */
+	justify-content: space-between;
+}
+
+#page-home header a {
+	/* Ladinho */
+	display: flex;
+
+	/* Usando a variável pra dizer a cor do texto */
+	color: var(--title-color);
+
+	/* Negrito; bold = 700 */
+	font-weight: bold;
+}
+
+#page-home header a span {
+	/* Margem não TØP */
+	margin-right: 16px;
+	display: flex;
+
+	/* Coloca a setinha de login */
+	background-image: url("../assets/log-in.svg");
+
+	/* Precisa disso aqui pra dar o tamanho da setinha */
+	width: 20px;
+	height: 20px;
+}
+
+#page-home main {
+	max-width: 560px;
+	height: 600px;
+
+	/* Preenche a box toda, não sei explicar mas é isso ae */
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+
+	/* Justifica no centro? */
+	justify-content: center;
+}
+
+#page-home main h1 {
+	/* Letra grandona */
+	font-size: 54px;
+}
+
+#page-home main p {
+	/* Letra menos grandona */
+	font-size: 24px;
+
+	/* Tamanho da linha da letra menos grandona */
+	line-height: 38px;
+
+	/* Agora sim uma margem TØP */
+	margin-top: 24px;
+}
+
+#page-home main a {
+	margin-top: 40px;
+
+	width: 100%;
+	max-width: 360px;
+	height: 72px;
+
+	/* Arredonda a borda */
+	border-radius: 8px;
+
+	/* Corzinha no botão */
+	background-color: var(--primary-color);
+
+	display: flex;
+	align-items: center;
+
+	/* Tempo pra transitar pro hover */
+	transition: 400ms;
+}
+
+/* Hover é quando passa o mouse em cima */
+#page-home main a:hover {
+	/* Vai ficar mais escurinho */
+	background-color: #2fb86e;
+}
+
+#page-home main a span {
+	width: 72px;
+	height: 72px;
+
+	/* Colocar arredondado só de um lado é ruim */
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+
+	/* Deixa escurinho */
+	background-color: rgba(0, 0, 0, 0.08);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Vai colocar uma parada na tela pelo CSS em vez de HTML */
+/* Não entendi bem por que mas é assim mesmo */
+#page-home main a span::after {
+	/* Escreve altos nada */
+	content: "";
+
+	/* Bota fotinha de lupa */
+	background-image: url("../assets/search.svg");
+
+	/* Tamanho da lupa */
+	/* Precisa se não fica sem lupa */
+	width: 20px;
+	height: 20px;
+}
+
+/* O texto do lado da lupa */
+/* O <strong> já diz pro HTML que tem quer ser bold */
+#page-home main a strong {
+	flex: 1;
+	color: white;
+	text-align: center;
+}

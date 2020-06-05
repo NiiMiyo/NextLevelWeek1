@@ -1,0 +1,46 @@
+:root {
+	/* Criando uma variável de cor pra usar mais tarde */
+	--title-color: #322153;
+	--primary-color: #34cb79;
+}
+
+* {
+	/* Definindo um valores padrão de margem e padding para todas as caixas */
+	margin: 0px;
+	padding: 0px;
+
+	/* Ok, esse pode demorar. */
+	/* A box ela tem tamanho padrão o Content dela (Texto por exemplo) */
+	/* Qualquer coisa a mais (Padding, Border, etc) vai aumentar a caixa além do que o definido */
+	/* Isso aqui diz que o tamanho da caixa é definido por tudo que tiver dentro da borda */
+	box-sizing: border-box;
+}
+
+html {
+	/* definindo uma fonte padrão pra todas as tags dentro de uma <html> */
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	/* Cor de fundo padrão pra todas as páginas */
+	background: #f0f0f5;
+
+	/* Deixa todas as fontes em antialiasing */
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	/* Tirar o sublinhado de todos links */
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/* Fonte e cor padrão para todas as tags <hN> */
+	font-family: "Ubuntu", sans-serif;
+	color: var(--title-color);
+}
